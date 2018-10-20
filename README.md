@@ -1,4 +1,5 @@
-# vue-graphql
+# Vue GraphQL example
+A basic examples with Vue and GrapQL. Based on [this](https://medium.com/@lachlanmiller_52885/graphql-basics-and-practical-examples-with-vue-6b649b9685e0) article by Lachlan Miller.
 
 ## Project setup
 ```
