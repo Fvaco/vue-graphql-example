@@ -6,6 +6,7 @@
     </div>
     <button @click="getLanguage">Get Language</button>
     <hr>
+
     <h3>Example 2</h3>
     <div>
       Data:
@@ -15,14 +16,15 @@
     </div>
     <button @click="getChampions">Get Champions</button>
     <hr>
+
     <h3>Example 3</h3>
     Name: <input v-model="championName">
       <div>
-        Data:
-        {{ champion }}
+        Data:{{ champion }}
       </div>
     <button @click="getChampionByName">Get Champion</button>
     <hr>
+
     <h3>Example 4</h3>
     Name: <input v-model="name">
     Attack Damage: <input v-model.number="attack">
@@ -31,7 +33,6 @@
       {{ updatedChampion }}
     </div>
     <button @click="updateAttackDamage">Update Champion</button>
-  </div>
   </div>
 </template>
 <script>
@@ -86,7 +87,7 @@ export default {
       this.champion = data.data.getChampionByName;
     },
     async updateAttackDamage() {
-      const {data} = await axios.post("http://localhost:4000/graphql", {
+      const { data } = await axios.post("http://localhost:4000/graphql", {
         query: `
         mutation UpdateAttackDamage(
           $championName: String!,  $attackDamage: Float) {
